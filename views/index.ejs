@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>♔ ChessMaster 2050</title>
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>♔</text></svg>">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    <div class="background-animation">
+        <div class="orb orb-1"></div>
+        <div class="orb orb-2"></div>
+        <div class="orb orb-3"></div>
+        <div class="orb orb-4"></div>
+    </div>
+
+    <div class="container">
+        <header class="header">
+            <div class="logo">
+                <div class="logo-icon">♔</div>
+                <div>
+                    <h1 class="logo-text">ChessMaster</h1>
+                    <p class="logo-subtitle">2050 Edition</p>
+                </div>
+            </div>
+            <div class="controls">
+                <button id="soundToggle" class="control-btn">
+                    <i class="fas fa-volume-up"></i>
+                </button>
+                <button id="themeToggle" class="control-btn">
+                    <i class="fas fa-palette"></i>
+                </button>
+            </div>
+        </header>
+
+        <div class="main-grid">
+            <aside class="sidebar left-sidebar">
+                <div class="glass-card">
+                    <div class="card-header">
+                        <i class="fas fa-user-circle"></i>
+                        <h2>Player Info</h2>
+                    </div>
+                    <div class="player-role">Connecting...</div>
+                    <div class="game-status">Waiting...</div>
+                </div>
+
+                <div class="glass-card">
+                    <div class="card-header">
+                        <i class="fas fa-clock"></i>
+                        <h2>Game Timer</h2>
+                    </div>
+                    <div class="timer-display">
+                        <div class="timer">00:00:00</div>
+                    </div>
+                </div>
+
+                <div class="glass-card">
+                    <div class="card-header">
+                        <i class="fas fa-chart-line"></i>
+                        <h2>Statistics</h2>
+                    </div>
+                    <div class="stats-grid">
+                        <div class="stat-card">
+                            <div class="stat-label">Total Moves</div>
+                            <div class="stat-value move-count">0</div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-label">Captured</div>
+                            <div class="stat-value captured-count">0</div>
+                        </div>
+                    </div>
+                </div>
+            </aside>
+
+            <main class="board-section">
+                <div class="glass-card board-card">
+                    <div class="chessboard-wrapper">
+                        <div class="chessboard"></div>
+                    </div>
+                </div>
+
+                <div class="glass-card">
+                    <div class="card-header">
+                        <i class="fas fa-history"></i>
+                        <h2>Move History</h2>
+                    </div>
+                    <div class="move-history">
+                        <div class="move-list">
+                            <p class="empty-state">No moves yet...</p>
+                        </div>
+                    </div>
+                </div>
+            </main>
+
+            <aside class="sidebar right-sidebar">
+                <div class="glass-card">
+                    <div class="card-header">
+                        <i class="fas fa-chess"></i>
+                        <h2>Captured Pieces</h2>
+                    </div>
+                    <div class="captured-section">
+                        <div class="captured-header">
+                            <i class="fas fa-circle text-white"></i>
+                            <span>Black Captured</span>
+                        </div>
+                        <div class="captured-display captured-white">—</div>
+                    </div>
+                    <div class="divider"></div>
+                    <div class="captured-section">
+                        <div class="captured-header">
+                            <i class="fas fa-circle text-black"></i>
+                            <span>White Captured</span>
+                        </div>
+                        <div class="captured-display captured-black">—</div>
+                    </div>
+                </div>
+
+                <button class="reset-btn">
+                    <i class="fas fa-redo-alt"></i>
+                    <span>Reset Game</span>
+                </button>
+
+                <div class="glass-card tips-card">
+                    <div class="card-header">
+                        <i class="fas fa-lightbulb"></i>
+                        <h2>Quick Tips</h2>
+                    </div>
+                    <ul class="tips-list">
+                        <li>Drag and drop pieces to move</li>
+                        <li>Board auto-rotates for black</li>
+                        <li>Real-time multiplayer sync</li>
+                        <li>Sound effects on moves</li>
+                    </ul>
+                </div>
+            </aside>
+        </div>
+    </div>
+
+    <script src="https://cdn.socket.io/4.8.1/socket.io.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/chess.js/0.10.3/chess.min.js"></script>
+    <script src="/js/chessgame.js"></script>
+</body>
+</html>

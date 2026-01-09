@@ -1,0 +1,28 @@
+{
+  "name": "multiplayer-chess-game",
+  "version": "2.0.0",
+  "description": "Modern real-time multiplayer chess game with advanced features",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js",
+    "dev": "nodemon app.js"
+  },
+  "keywords": [
+    "chess",
+    "multiplayer",
+    "socket.io",
+    "game",
+    "realtime"
+  ],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.18.2",
+    "socket.io": "^4.8.1",
+    "ejs": "^3.1.9",
+    "chess.js": "^0.10.3"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.1"
+  }
+}
