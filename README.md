@@ -37,7 +37,7 @@ A sophisticated, real-time multiplayer chess application with a beautiful modern
 
 1. Clone the repository:
 ```bash
-git clone <repository-url>
+git clone https://github.com/NoorAbdullah02/ChessProject.git
 cd ChessProject
 ```
 
